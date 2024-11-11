@@ -20,12 +20,13 @@ export default function HomeScreen(props) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
+      <Text style={styles.title}>Products{"\n"}{"\n"}</Text>
 
       {products.map((product) => (
-        <Text key={product.id} style={styles.text}>{product.name}</Text>
-        ))
-      }
+        <Text key={product.id} style={styles.text}>
+          {product.name}
+        </Text>
+      ))}
     </View>
   );
 }
@@ -39,4 +40,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
   },
+  title: {
+    fontSize: 40
+  }
 });
