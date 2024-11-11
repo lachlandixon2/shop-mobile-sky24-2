@@ -1,0 +1,83 @@
+@HostAddress = http://localhost:3000
+
+### Categories Operations ###
+
+# GET all categories
+GET {{HostAddress}}/api/categories HTTP/1.1
+
+###
+
+# GET category by ID
+GET {{HostAddress}}/api/categories/1 HTTP/1.1
+
+###
+
+# POST create category
+POST {{HostAddress}}/api/categories HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "New Category"
+}
+
+###
+
+# PUT update category
+PUT {{HostAddress}}/api/categories/5 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 5,
+    "name": "Updated Category"
+}
+
+###
+
+# DELETE category
+DELETE {{HostAddress}}/api/categories/5 HTTP/1.1
+
+###
+
+### Products Operations ###
+
+# GET all products
+GET {{HostAddress}}/api/products HTTP/1.1
+
+###
+
+# GET product by ID
+GET {{HostAddress}}/api/products/1 HTTP/1.1
+
+###
+
+# POST create product
+POST {{HostAddress}}/api/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "New Product",
+    "price": 10.99,
+    "description": "Description of new product",
+    "stock": 100,
+    "categoryId": 1
+}
+
+###
+
+# PUT update product
+PUT {{HostAddress}}/api/products/8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 8,
+    "name": "Updated Product",
+    "price": 12.99,
+    "description": "Updated description",
+    "stock": 150,
+    "categoryId": 2
+}
+
+###
+
+# DELETE product
+DELETE {{HostAddress}}/api/products/8 HTTP/1.1
