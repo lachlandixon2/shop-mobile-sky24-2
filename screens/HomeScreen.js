@@ -1,46 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
-import { fetchProducts } from '../utils/api';
+import React, { useEffect, useState } from 'react';
+import {Avatar, Card, IconButton, FAB, Snackbar, TextInput, Dialog, Portal, Button, Text, Surface, Divider, Searchbar, useTheme } from "react-native-paper";
+import {View, Image, TouchableOpacity, StyleSheet, ScrollView, ActivityIndicator} from "react-native";
+// import { TouchableOpacity } from "react-native-gesture-handler";
+import { useIsFocused } from "@react-navigation/native";
+import { Dropdown } from "react-native-paper-dropdown";
 
 export default function HomeScreen(props) {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchProducts();
-        setProducts(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Products{"\n"}{"\n"}</Text>
-
-      {products.map((product) => (
-        <Text key={product.id} style={styles.text}>
-          {product.name}
-        </Text>
-      ))}
-    </View>
-  );
+    <Surface style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text  variant='displaySmall'>HomeScreen</Text>
+    </Surface>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    fontSize: 18,
-  },
-  title: {
-    fontSize: 40
-  }
-});
