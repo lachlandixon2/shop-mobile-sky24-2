@@ -35,8 +35,8 @@ export default function ProductEditScreen(props) {
 
   const [product, setProduct] = useState({
     name: "",
-    price: 0,
-    stock: 0,
+    price: '',
+    stock: '',
     description: "",
     categoryId: 1,
   });
@@ -118,7 +118,7 @@ export default function ProductEditScreen(props) {
                 style={{ marginBottom: 16 }}
               />
               <TextInput
-                label="price"
+                label="Price"
                 value={product.price}
                 onChangeText={(text) => setProduct({ ...product, price: text })}
                 mode="outlined"
@@ -126,7 +126,7 @@ export default function ProductEditScreen(props) {
                 style={{ marginBottom: 16 }}
               />
               <TextInput
-                label="stock"
+                label="Stock"
                 value={product.stock}
                 onChangeText={(text) => setProduct({ ...product, stock: text })}
                 mode="outlined"
@@ -134,7 +134,7 @@ export default function ProductEditScreen(props) {
                 style={{ marginBottom: 16 }}
               />
               <TextInput
-                label="description"
+                label="Description"
                 value={product.description}
                 onChangeText={(text) => setProduct({ ...product, description: text })}
                 mode="outlined"

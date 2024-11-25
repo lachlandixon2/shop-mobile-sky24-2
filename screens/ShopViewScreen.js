@@ -89,7 +89,7 @@ export default function ShopViewScreen(props) {
   async function handleDelete() {
     if (selectedProductId !== null) {
       try {
-        const success = await deletePerson(selectedProductId);
+        const success = await deleteProduct(selectedProductId);
         if (success) {
           fetchData();
           hideDialog();
