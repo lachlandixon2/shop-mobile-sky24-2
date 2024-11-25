@@ -1,12 +1,12 @@
-import React from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation';
-import { MaterialIcons } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import HomeScreen from '../screens/HomeScreen';
-import HelpScreen from '../screens/HelpScreen';
-import ShopNavigator from './ShopNavigator';
+import React from "react";
+import { View, Text, Button, StyleSheet } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
+import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import HomeScreen from "../screens/HomeScreen";
+import HelpScreen from "../screens/HelpScreen";
+import ShopNavigator from "./ShopNavigator";
 
 // const Tab = createBottomTabNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -48,6 +48,4 @@ export default function MainNavigator() {
   );
 }
 
-const styles = StyleSheet.create({
-
-});
+const styles = StyleSheet.create({});
