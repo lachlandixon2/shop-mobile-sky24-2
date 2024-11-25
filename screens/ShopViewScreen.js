@@ -59,8 +59,8 @@ export default function ShopViewScreen(props) {
 
   // #region Navigation
 
-  function showAddProduct(id) {
-    props.navigation.navigate("ProductView", { id: -1 });
+  function showAddProduct() {
+    props.navigation.navigate("ProductEdit", { id: -1 });
   }
 
   function showViewProduct(id) {
